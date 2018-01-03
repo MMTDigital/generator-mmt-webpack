@@ -5,4 +5,4 @@
  * web part/page/template), you will need to import it here
  */
 
-import mmtLogo from '@images/mmt.png'
+import mmtLogo from '@images/mmt.png' // eslint-disable-line no-unused-vars

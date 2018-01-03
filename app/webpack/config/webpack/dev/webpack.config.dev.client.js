@@ -1,4 +1,5 @@
 import webpack from 'webpack'
+import StyleLintPlugin from 'stylelint-webpack-plugin'
 
 export default {
   stats: 'none',
@@ -8,6 +9,7 @@ export default {
       'process.env': {
         NODE_ENV: JSON.stringify('development')
       }
-    })
+    }),
+    new StyleLintPlugin()
   ]
 }

@@ -13,7 +13,9 @@ const sassLoaders = [
     loader: 'postcss-loader',
     options: {
       parser: 'postcss-scss',
-      config: '../../postcss.config.js'
+      config: {
+        path: '../../postcss.config.js'
+      }
     }
   },
   {

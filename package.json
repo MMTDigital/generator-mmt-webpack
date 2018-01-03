@@ -45,8 +45,6 @@
   },
   "scripts": {
     "prepublish": "nsp check",
-    "pretest": "eslint .",
-    "precommit": "lint-staged",
     "test": "jest"
   },
   "lint-staged": {
@@ -81,6 +79,6 @@
       "prettier"
     ]
   },
-  "repository": "MMTDigital/generator-mmt-webpack",
+  "repository": "https://github.com/MMTDigital/generator-mmt-webpack",
   "license": "MIT"
 }
