@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "A website build by MMT Digital",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:snapshots": "jest --updateSnapshot",
+    "test:watch": "jest --watch -o",
     "build:dev": "node -r babel-register node_modules/.bin/webpack --config config/webpack/dev/webpack.config.dev.js",
     "build:prod": "node -r babel-register node_modules/.bin/webpack --config config/webpack/prod/webpack.config.prod.js",
     "start": "npm run build:dev",
@@ -22,6 +25,7 @@
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.1.2",
+    "babel-jest": "^22.0.4",
     "babel-loader": "^7.1.2",
     "babel-plugin-module-resolver": "^2.7.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
@@ -36,16 +40,19 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.8",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
     "clean-webpack-plugin": "^0.1.16",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "cssnano": "^3.10.0",
+    "enzyme": "^3.3.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-loader": "^0.5.1",
     "husky": "^0.14.3",
     "img-loader": "^2.0.0",
+    "jest": "^22.0.4",
     "node-sass": "^4.5.3",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "postcss-loader": "^2.0.6",
@@ -114,5 +121,24 @@
         }
       ]
     }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html)$": "<rootDir>config/jest/jest.filemock.js",
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "setupFiles": [
+      "./config/jest/jest.setup.js"
+    ],
+    "modulePaths": [
+      "<rootDir>/src"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    },
+    "verbose": false
   }
 }
