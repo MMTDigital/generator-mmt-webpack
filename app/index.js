@@ -37,6 +37,7 @@ module.exports = class extends Generator {
     const { projectName } = this.props
 
     this.fs.copy(this.templatePath('.babelrc'), this.destinationPath('.babelrc'))
+    this.fs.copy(this.templatePath('jsconfig.json'), this.destinationPath('jsconfig.json'))
     this.fs.copy(this.templatePath('src/**'), this.destinationPath('src'))
 
     this.fs.copyTpl(
