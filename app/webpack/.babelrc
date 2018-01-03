@@ -1,0 +1,36 @@
+{
+  "presets": [
+    ["env"]
+  ],
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-decorators",
+    "transform-class-properties",
+    "transform-function-bind",
+    "transform-do-expressions",
+    "transform-react-jsx",
+    "transform-export-extensions",
+    "syntax-dynamic-import",
+    [
+      "module-resolver", {
+        "root": ["./"],
+        "alias": {
+          "@root": "src",
+          "@assets": "src/assets",
+          "@images": "src/assets/images",
+          "@icons": "src/assets/icons",
+          "@fonts": "src/assets/fonts",
+          "@styles": "src/styles"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types",
+        "transform-react-constant-elements"
+      ]
+    }
+  }
+}

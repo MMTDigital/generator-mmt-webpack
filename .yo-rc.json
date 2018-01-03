@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "James Sear",
+      "authorEmail": "james.s@mmtdigital.co.uk",
+      "authorUrl": ""
+    }
+  }
+}

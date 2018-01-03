@@ -1,0 +1,36 @@
+.hello {
+  background-color: red;
+}
+
+$path: './assets/fonts';
+$path2: './assets/icons';
+
+@font-face {
+  font-family: 'VOXI';
+  src: url('#{$path}/VOXI-Semibold.eot');
+  src: local('VOXI-Semibold'),
+    url('#{$path}/VOXI-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('#{$path}/VOXI-Semibold.woff2') format('woff2'),
+    // url('#{$path}/VOXI-Semibold.woff') format('woff'),
+    // url('#{$path}/VOXI-Semibold.ttf') format('truetype'),
+    url('#{$path}/VOXI-Semibold.svg#VOXI-Semibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VOXI';
+  src: url('#{$path}/VOXI-Bold.eot');
+  src: local('VOXI-Bold'),
+    url('#{$path}/VOXI-Bold.eot?#iefix') format('embedded-opentype'),
+    url('#{$path}/VOXI-Bold.woff2') format('woff2'),
+    // url('#{$path}/VOXI-Bold.woff') format('woff'),
+    // url('#{$path}/VOXI-Bold.ttf') format('truetype'),
+    url('#{$path}/VOXI-Bold.svg#VOXI-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'VOXI', sans-serif;
+}
