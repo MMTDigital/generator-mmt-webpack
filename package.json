@@ -1,6 +1,6 @@
 {
   "name": "generator-mmt-webpack",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A webpack boilerplate generator to seed internal MMT projects",
   "homepage": "https://www.mmtdigital.co.uk",
   "author": {
