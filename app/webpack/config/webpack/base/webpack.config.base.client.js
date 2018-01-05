@@ -38,7 +38,7 @@ export default {
     new FriendlyErrorsWebpackPlugin(),
 
     new ExtractTextPlugin({
-      filename: 'styles.[chunkhash:8].css',
+      filename: 'styles.css',
       allChunks: true,
       ignoreOrder: true
     }),
