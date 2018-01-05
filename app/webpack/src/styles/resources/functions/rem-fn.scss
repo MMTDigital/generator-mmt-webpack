@@ -1,0 +1,10 @@
+//
+// @usage: Converts a pixel value to an rem value
+// @param: {Number} $pixels
+// @param: {Number} $context
+//
+
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}

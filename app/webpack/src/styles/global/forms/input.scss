@@ -1,0 +1,75 @@
+//
+// Input
+//
+
+$text-input-bg-disabled: grey;
+$text-input-bg: $color-white;
+$text-input-border: $color-black;
+$text-input-border-focus: orange;
+$text-input-color-placeholder: $color-black;
+
+//
+//	@usage: Maintain consistent focus styles on form elements
+//  @param: {string} $color
+//
+@mixin text-input-placeholder($color: $text-input-color-placeholder) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+//
+// @usage: Maintain consistent focus styles on form elements
+// @param: {string} $color
+//
+@mixin text-input-tab-focus($color: $text-input-border-focus) {
+  &:focus {
+    border-color: $color;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+//
+// @usage: use to style anything that the user can input text into
+//
+@mixin gbl-text-input {
+  @include rem(16px);
+  display: block;
+  width: 100%;
+  font-weight: 300;
+  color: inherit;
+  background-color: $text-input-bg;
+  background-image: none;
+  border: 1px solid $text-input-border;
+  border-radius: 0;
+  -webkit-appearance: none;
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background-color: $text-input-bg-disabled;
+    border-color: $text-input-bg-disabled;
+    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+}
+
+input[type=text] {
+  @include gbl-text-input;
+  @include text-input-tab-focus;
+  @include text-input-placeholder;
+}

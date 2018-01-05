@@ -1,0 +1,42 @@
+//
+// Custom Fonts
+//
+// If you are using a custom font with multiple weights, avoid
+// defining multiple font names for each weight — instead — define
+// one shared font family name, and use the `font-weight` property
+// to set you font weights. See an example below:
+//
+
+//
+// Normal
+//
+
+// @font-face {
+//   font-family: 'font-name';
+//   src: url('#{$gbl-path-fonts}/Normal.eot');
+//   src: local('Normal'),
+//     url('#{$gbl-path-fonts}/Normal.eot?#iefix') format('embedded-opentype'),
+//     url('#{$gbl-path-fonts}/Normal.woff2') format('woff2'),
+//     url('#{$gbl-path-fonts}/Normal.woff') format('woff'),
+//     url('#{$gbl-path-fonts}/Normal.ttf') format('truetype'),
+//     url('#{$gbl-path-fonts}/Normal.svg#Bold') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+//
+// Bold
+//
+
+// @font-face {
+//   font-family: 'font-name';
+//   src: url('#{$gbl-path-fonts}/Bold.eot');
+//   src: local('Bold'),
+//     url('#{$gbl-path-fonts}/Bold.eot?#iefix') format('embedded-opentype'),
+//     url('#{$gbl-path-fonts}/Bold.woff2') format('woff2'),
+//     url('#{$gbl-path-fonts}/Bold.woff') format('woff'),
+//     url('#{$gbl-path-fonts}/Bold.ttf') format('truetype'),
+//     url('#{$gbl-path-fonts}/Bold.svg#Bold') format('svg');
+//   font-weight: bold;
+//   font-style: normal;
+// }

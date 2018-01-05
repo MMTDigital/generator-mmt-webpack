@@ -1,0 +1,9 @@
+//
+// @usage: Converts a pixel value to an em value
+// @param: {Number} $pixels
+// @param: {Number} $context
+//
+
+@function em($pixels, $context: 16px) {
+  @return #{$pixels/$context}em;
+}

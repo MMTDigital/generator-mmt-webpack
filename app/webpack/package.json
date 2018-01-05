@@ -22,9 +22,11 @@
   "author": "MMT Digital",
   "license": "ISC",
   "devDependencies": {
+    "@skatejs/bore": "^4.0.3",
+    "@skatejs/val": "^0.3.1",
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.2",
+    "babel-eslint": "^7.2.3",
     "babel-jest": "^22.0.4",
     "babel-loader": "^7.1.2",
     "babel-plugin-module-resolver": "^2.7.1",
@@ -40,7 +42,6 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.8",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
-    "chai": "^4.1.2",
     "clean-webpack-plugin": "^0.1.16",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
@@ -58,6 +59,7 @@
     "postcss-loader": "^2.0.6",
     "postcss-scss": "^1.0.2",
     "sass-loader": "^6.0.6",
+    "sass-resources-loader": "^1.3.1",
     "standard": "^10.0.3",
     "standard-loader": "^6.0.1",
     "stylelint": "^8.4.0",
@@ -112,6 +114,26 @@
       "selector-pseudo-element-colon-notation": "single",
       "at-rule-name-space-after": null,
       "declaration-empty-line-before": null,
+      "at-rule-empty-line-before": null,
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "function",
+            "if",
+            "else",
+            "each",
+            "mixin",
+            "include",
+            "return",
+            "media",
+            "at-root",
+            "debug",
+            "warn",
+            "error"
+          ]
+        }
+      ],
       "property-no-unknown": [
         true,
         {
@@ -139,6 +161,9 @@
     "transform": {
       "^.+\\.js?$": "babel-jest"
     },
-    "verbose": false
+    "verbose": true
+  },
+  "dependencies": {
+    "domready": "^1.0.8"
   }
 }

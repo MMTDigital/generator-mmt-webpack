@@ -20,7 +20,10 @@
           "@images": "src/assets/images",
           "@icons": "src/assets/icons",
           "@fonts": "src/assets/fonts",
-          "@styles": "src/styles"
+          "@components": "src/components",
+          "@styles": "src/styles",
+          "@asset-manifest": "src/asset-manifest.js",
+          "@global-styles": "src/styles/styles.scss"
         }
       }
     ]

@@ -23,6 +23,12 @@ const sassLoaders = [
     options: {
       outputStyle: 'expanded'
     }
+  },
+  {
+    loader: 'sass-resources-loader',
+    options: {
+      resources: [ './src/styles/resources/all.scss' ]
+    }
   }
 ]
 

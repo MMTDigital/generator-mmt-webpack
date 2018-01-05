@@ -1,0 +1,11 @@
+//
+// Button
+//
+
+@mixin button {
+  -webkit-appearance: none;
+}
+
+input[type=button] {
+  @include button;
+}

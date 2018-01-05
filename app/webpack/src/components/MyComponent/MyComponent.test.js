@@ -1,19 +1,23 @@
-/* global describe, test, expect, shallow */
+/* global describe, test, expect, mount */
 
 import MyComponent from './MyComponent'
 
 describe('The MyComponent component', () => {
-  shallow(`<div class="js-class-name"></div>`)
+  mount(`<div class="js-wrapper" />`)
+
+  test('can mount', () => {
+    const component = new MyComponent('js-wrapper', 'js-button')
+  })
+
   test('can increment by one', () => {
-    const component = new MyComponent('js-class-name')
+    const component = new MyComponent('js-wrapper', 'js-button')
     component.incrementSomething()
-    expect(component.something).to.equal(1)
+    expect(component.something).toBe(1)
   })
 
   test('does not increment by more than one at a time', () => {
-    shallow(`<div class="js-class-name"></div>`)
-    const component = new MyComponent('js-class-name')
+    const component = new MyComponent('js-wrapper', 'js-button')
     component.incrementSomething()
-    expect(component.something).to.not.equal(5)
+    expect(component.something).not.toBe(5)
   })
 })

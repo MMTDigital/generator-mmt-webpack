@@ -1,0 +1,10 @@
+//
+// @usage: Returns the required padding-top for an intrinsic ratio
+// @param: {Number} $width
+// @param: {Number} $height
+//
+
+@function ratio-fn($width, $height) {
+  $padding-top: ( $height / $width );
+  @return percentage($padding-top);
+}

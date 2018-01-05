@@ -1,0 +1,14 @@
+//
+//	@usage: Pass a pixel value to get back the rem value and a pixel fallback.
+//	@param: {Number} $width
+//  @param: {Number} $height
+//
+@mixin rem($size) {
+  @if ($size != 'inherit') {
+    font-size: $size;
+    font-size: rem($size);
+  }
+  @else {
+    font-size: inherit;
+  }
+}

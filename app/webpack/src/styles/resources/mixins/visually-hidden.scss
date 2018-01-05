@@ -1,0 +1,28 @@
+//
+// Visually Hidden
+//
+
+//
+// @usage: Hides an element — visually — respecting accessibility
+//
+@mixin _hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin visually-hidden {
+  &:not(:focus):not(:active) {
+    @include _hidden;
+  }
+}
+
+@mixin visually-hidden-all {
+  @include _hidden;
+}

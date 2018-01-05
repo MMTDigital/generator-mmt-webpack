@@ -1,7 +1,5 @@
 class MyComponent {
   constructor (wrapperClassName, buttonClassName) {
-    console.info(`${this.constructor.name} has mounted`)
-
     this.wrapperClassName = wrapperClassName
     this.buttonClassName = buttonClassName
     this.something = 0
@@ -9,7 +7,7 @@ class MyComponent {
     const instance = document.querySelector(`.${this.wrapperClassName}`)
 
     if (!instance) {
-      throw new Error(`.${className} was not found, therefore ${this.constructor.name} was not initiated...`)
+      throw new Error(`.${this.wrapperClassName} was not found, therefore ${this.constructor.name} was not initiated...`)
     }
 
     this.setupListeners(buttonClassName)
@@ -17,7 +15,7 @@ class MyComponent {
 
   setupListeners (buttonClassName) {
     if (buttonClassName) {
-      document.addEventListener(`.${buttonClassName}`, onButtonClick)
+      document.addEventListener(`.${buttonClassName}`, this.onButtonClick)
     }
   }
 
@@ -26,9 +24,8 @@ class MyComponent {
   }
 
   incrementSomething () {
-    this.something++
+    return this.something++
   }
 }
 
-const component = new MyComponent()
-export default component
+export default MyComponent

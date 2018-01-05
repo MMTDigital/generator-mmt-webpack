@@ -1,0 +1,10 @@
+//
+// Paths
+//
+// Try not to hardcode paths to assets, instead, use path
+// variables to make things easy to shift around, if you need
+// to. Keep these variables neatly in the global namespace by
+// prefixing with `$gbl-`
+//
+
+$gbl-path-fonts: './assets/fonts' !default;
