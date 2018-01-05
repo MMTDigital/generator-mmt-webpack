@@ -6,9 +6,9 @@ import font from '../loader-configs/font'
 import html from '../loader-configs/html'
 import image from '../loader-configs/image'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import DelWebpackPlugin from 'del-webpack-plugin'
-import ManifestPlugin from 'webpack-manifest-plugin'
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin'
+// import DelWebpackPlugin from 'del-webpack-plugin'
+// import ManifestPlugin from 'webpack-manifest-plugin'
 
 const root = process.cwd()
 
@@ -20,7 +20,7 @@ export default {
   output: {
     path: path.resolve(root, paths.outputBuildDir, paths.outputAssetsDir),
     publicPath: `/${paths.outputAssetsDir}/`,
-    filename: '[name].[chunkhash:8].js'
+    filename: '[name].js'
   },
 
   module: {
@@ -34,22 +34,22 @@ export default {
   },
 
   plugins: [
-    new DelWebpackPlugin({ info: false }),
+    // new DelWebpackPlugin({ info: false }),
     new FriendlyErrorsWebpackPlugin(),
 
     new ExtractTextPlugin({
       filename: 'styles.css',
       allChunks: true,
       ignoreOrder: true
-    }),
-
-    new ManifestPlugin({
-      fileName: 'manifest.json',
-      basePath: `/${paths.outputAssetsDir}/`,
-      seed: {
-        name: 'manifest'
-      }
     })
+
+    // new ManifestPlugin({
+    //   fileName: 'manifest.json',
+    //   basePath: `/${paths.outputAssetsDir}/`,
+    //   seed: {
+    //     name: 'manifest'
+    //   }
+    // })
 
     // jQuery, jake weary.
     //

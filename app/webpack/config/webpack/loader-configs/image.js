@@ -9,7 +9,7 @@ export default {
     //     options: {
     //       limit: 8192, // Will use img-loader over this limit
     //       publicPath: '/assets/',
-    //       name: 'images/[name].[hash:8].[ext]'
+    //       name: 'images/[name].[ext]'
     //     }
     //   }
     // },
@@ -18,7 +18,7 @@ export default {
         loader: 'file-loader',
         options: {
           publicPath: '/assets/',
-          name: 'images/[name].[hash:8].[ext]'
+          name: 'images/[name].[ext]'
         }
       }
     },
