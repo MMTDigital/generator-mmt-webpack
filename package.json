@@ -29,6 +29,7 @@
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
     "yeoman-generator": "^2.0.1",
+    "yeoman-option-or-prompt": "^2.0.0",
     "yosay": "^2.0.1"
   },
   "scripts": {

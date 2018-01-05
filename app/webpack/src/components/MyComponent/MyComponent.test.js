@@ -1,4 +1,5 @@
 /* global describe, test, expect, mount */
+/* eslint-disable no-unused-vars */
 
 import MyComponent from './MyComponent'
 

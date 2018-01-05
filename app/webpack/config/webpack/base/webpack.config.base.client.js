@@ -1,23 +1,20 @@
 import path from 'path'
 import paths from '../../paths'
-import webpack from 'webpack'
 import javascript from '../loader-configs/javascript'
 import style from '../loader-configs/style'
 import font from '../loader-configs/font'
 import html from '../loader-configs/html'
 import image from '../loader-configs/image'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import CleanWebpackPlugin from 'clean-webpack-plugin'
+import DelWebpackPlugin from 'del-webpack-plugin'
 import ManifestPlugin from 'webpack-manifest-plugin'
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin'
-
 
 const root = process.cwd()
 
 export default {
   entry: {
     bundle: path.resolve(root, paths.input.entry)
-    // vendors: '' // TODO: Vendor bundles, commons chunk plugin
   },
 
   output: {
@@ -37,8 +34,7 @@ export default {
   },
 
   plugins: [
-    new CleanWebpackPlugin([paths.outputBuildDir], { root }),
-
+    new DelWebpackPlugin({ info: false }),
     new FriendlyErrorsWebpackPlugin(),
 
     new ExtractTextPlugin({

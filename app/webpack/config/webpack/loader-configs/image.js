@@ -1,13 +1,24 @@
+// If you're in React, un-comment the url-loader for Data URIs for small images :)
+
 export default {
   test: /\.(png|jpg|jpeg|gif|webp)$/,
   rules: [
+    // {
+    //   use: {
+    //     loader: 'url-loader', // === DataURI
+    //     options: {
+    //       limit: 8192, // Will use img-loader over this limit
+    //       publicPath: '/assets/',
+    //       name: 'images/[name].[hash:8].[ext]'
+    //     }
+    //   }
+    // },
     {
       use: {
-        loader: 'url-loader', // === DataURL
+        loader: 'file-loader',
         options: {
-          limit: 8192, // Will use file-loader over this limit
           publicPath: '/assets/',
-          name: 'images/[name].[ext]?[hash]'
+          name: 'images/[name].[hash:8].[ext]'
         }
       }
     },

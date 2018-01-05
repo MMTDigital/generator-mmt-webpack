@@ -7,7 +7,8 @@ export default {
       loader: 'standard-loader',
       options: {
         error: false,
-        parser: 'babel-eslint'
+        parser: 'babel-eslint',
+        snazzy: true
       }
     },
     { use: 'babel-loader' }

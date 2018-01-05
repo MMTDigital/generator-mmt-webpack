@@ -3,7 +3,7 @@ import paths from '../../paths'
 
 export default {
   test: /\.(woff|woff2|ttf|eot|svg)$/,
-  exclude: path.resolve(process.cwd(), paths.input.icons),
+  include: path.resolve(process.cwd(), paths.input.fonts),
   rules: [
     {
       loader: 'file-loader',
