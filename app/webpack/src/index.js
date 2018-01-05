@@ -23,6 +23,7 @@
 // We import assets and styles to prompt webpack to bundle them
 import '@asset-manifest'
 import '@global-styles'
+import '@polyfills'
 
 import domReady from 'domready'
 import MyComponent from '@components/MyComponent'

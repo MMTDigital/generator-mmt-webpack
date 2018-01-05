@@ -23,6 +23,7 @@
           "@components": "src/components",
           "@styles": "src/styles",
           "@asset-manifest": "src/asset-manifest.js",
+          "@polyfills": "src/polyfills.js",
           "@global-styles": "src/styles/styles.scss"
         }
       }
