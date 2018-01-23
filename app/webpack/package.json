@@ -30,6 +30,7 @@
     "babel-jest": "^22.0.4",
     "babel-loader": "^7.1.2",
     "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators": "^6.24.1",
@@ -41,6 +42,7 @@
     "babel-plugin-transform-react-constant-elements": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.8",
+    "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
     "cross-env": "^5.0.5",
@@ -167,6 +169,7 @@
   },
   "dependencies": {
     "core-js": "^2.5.3",
-    "domready": "^1.0.8"
+    "domready": "^1.0.8",
+    "regenerator-runtime": "^0.11.1"
   }
 }

@@ -12,6 +12,8 @@
     "transform-react-jsx",
     "transform-export-extensions",
     "syntax-dynamic-import",
+    "syntax-async-functions",
+    "transform-regenerator",
     [
       "module-resolver", {
         "root": ["./"],
