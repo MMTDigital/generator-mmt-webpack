@@ -5,6 +5,7 @@
   "plugins": [
     "transform-object-rest-spread",
     "transform-decorators",
+    "transform-decorators-legacy",
     "transform-class-properties",
     "transform-function-bind",
     "transform-do-expressions",
