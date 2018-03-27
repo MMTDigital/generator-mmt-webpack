@@ -19,7 +19,7 @@ Then generate your MMT Digital front-end boilerplate, `cd` to the directory wher
 
 * `yo mmt-webpack`
 
-For more information on usage, please check on the internal wiki: https://mmtdigital.atlassian.net/wiki/spaces/DEV/pages/312606739/MMT+Digital+Webpack+Boilerplate+Generator+Using+Yeoman
+For more information on usage, please check on the internal MMT wiki (Ping James S for a link if you need it).
 
 ## Contribution
 
