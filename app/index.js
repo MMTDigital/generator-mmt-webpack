@@ -1,5 +1,6 @@
 require('./notifier')
 
+const mkdirp = require('mkdirp')
 const Generator = require('yeoman-generator')
 const path = require('path')
 
