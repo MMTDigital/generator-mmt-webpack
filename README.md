@@ -13,13 +13,23 @@ Currently, Mac users will also need to install libpng (we're working on changing
 * Install Homebrew
 * `brew install libpng`
 
+## Usage
+
 **Note: Make sure the directory is empty. The generator will even create your package.json for you.**
 
-Then generate your MMT Digital front-end boilerplate, `cd` to the directory where the front-end code for your project is, then run:
+To generate your MMT Digital front-end boilerplate, `cd` to the directory where the front-end code for your project is, then run:
 
 * `yo mmt-webpack`
 
-For more information on usage, please check on the internal MMT wiki (Ping James S for a link if you need it).
+For more information on usage, please check on the internal MMT wiki (Drop a message in the #front-end Slack channel).
+
+### Favicon Support
+
+The webpack setup supports Favicon generation OOTB (Out of the box 👍).
+
+In order to use this functionality; simply replace the image located at: `src/assets/images/favicon.png` with your project's required favicon. The task to generate the different icons, can be found in the base webpack config; should you wish to make an changes to the way icons are generated.
+
+https://github.com/jantimon/favicons-webpack-plugin
 
 ## Contribution
 
