@@ -1,7 +1,4 @@
 const Generator = require('yeoman-generator')
-const chalk = require('chalk')
-const yosay = require('yosay')
-const mkdirp = require('mkdirp')
 const path = require('path')
 
 module.exports = class extends Generator {
@@ -41,7 +38,7 @@ module.exports = class extends Generator {
           dot: true,
           ignore: ['**/node_modules/**', '**/react/**']
         }
-    })
+      })
 
     this.fs.copyTpl(
       this.templatePath('package.json'),
