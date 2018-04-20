@@ -5,7 +5,9 @@ const notify = () => {
   const notifier = updateNotifier({ pkg })
 
   if (notifier.update) {
-    notifier.notify()
+    notifier.notify({
+      defer: false
+    })
   }
 }
 
