@@ -1,11 +1,12 @@
+const updateNotifier = require('update-notifier')
+const pkg = require('../package.json')
+
 const notify = () => {
   const notifier = updateNotifier({ pkg })
-  console.log(notifier.update)
-  // if (notifier.update) {
-    console.log(`
-      You're on an oudated version. Please update before using: ${notifier.update.latest}
-    `)
-  // }
+
+  if (notifier.update) {
+    notifier.notify()
+  }
 }
 
 module.exports = notify
