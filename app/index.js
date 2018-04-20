@@ -1,6 +1,7 @@
 const notify = require('./notifier')
 const Generator = require('yeoman-generator')
 const path = require('path')
+const mkdirp = require('mkdirp')
 notify()
 
 module.exports = class extends Generator {
