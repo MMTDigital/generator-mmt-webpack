@@ -1,7 +1,7 @@
-require('./notifier')
-
+const notify = require('./notifier')
 const Generator = require('yeoman-generator')
 const path = require('path')
+notify()
 
 module.exports = class extends Generator {
   paths () {
@@ -9,6 +9,8 @@ module.exports = class extends Generator {
   }
 
   prompting () {
+    notify()
+
     this.log(`
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
