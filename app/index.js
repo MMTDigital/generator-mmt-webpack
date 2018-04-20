@@ -1,9 +1,6 @@
 require('./notifier')
 
 const Generator = require('yeoman-generator')
-const chalk = require('chalk')
-const yosay = require('yosay')
-const mkdirp = require('mkdirp')
 const path = require('path')
 
 module.exports = class extends Generator {
