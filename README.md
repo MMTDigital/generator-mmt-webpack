@@ -6,7 +6,7 @@ A yeoman generator to output a webpack boilerplate generator to seed internal MM
 ## Installation
 Assuming you have Node installed, installation is simple:
 
-* `npm i -g yeoman generator-mmt-webpack`
+* `npm i -g yo generator-mmt-webpack`
 
 Currently, Mac users will also need to install libpng (we're working on changing this):
 
