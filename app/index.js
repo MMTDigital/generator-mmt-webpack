@@ -1,8 +1,8 @@
+const notify = require('./notifier')
 const Generator = require('yeoman-generator')
-const chalk = require('chalk')
-const yosay = require('yosay')
-const mkdirp = require('mkdirp')
 const path = require('path')
+const mkdirp = require('mkdirp')
+notify()
 
 module.exports = class extends Generator {
   paths () {
@@ -10,6 +10,8 @@ module.exports = class extends Generator {
   }
 
   prompting () {
+    notify()
+
     this.log(`
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -32,21 +34,23 @@ module.exports = class extends Generator {
   }
 
   writing () {
+    mkdirp.sync('config/webpack')
+
     const { projectName } = this.props
 
-    this.fs.copy(
-      this.templatePath('**/*'),
-      this.destinationPath(), {
-        globOptions: {
-          dot: true,
-          ignore: ['**/node_modules/**', '**/react/**']
-        }
-    })
+    this.fs.copy(this.templatePath('.babelrc'), this.destinationPath('.babelrc'))
+    this.fs.copy(this.templatePath('jsconfig.json'), this.destinationPath('jsconfig.json'))
+    this.fs.copy(this.templatePath('src/**'), this.destinationPath('src'))
 
     this.fs.copyTpl(
       this.templatePath('package.json'),
       this.destinationPath('package.json'),
       { projectName }
+    )
+
+    this.fs.copy(
+      this.templatePath('config/**'),
+      this.destinationPath('config')
     )
   }
 

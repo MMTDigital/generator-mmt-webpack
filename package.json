@@ -1,6 +1,6 @@
 {
   "name": "generator-mmt-webpack",
-  "version": "0.0.9",
+  "version": "0.0.16",
   "description": "A webpack boilerplate generator to seed internal MMT projects",
   "homepage": "https://www.mmtdigital.co.uk",
   "author": {
@@ -29,6 +29,7 @@
     "chalk": "^2.1.0",
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
+    "update-notifier": "^2.5.0",
     "yeoman-generator": "^2.0.1",
     "yeoman-option-or-prompt": "^2.0.0",
     "yosay": "^2.0.1"
