@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "chalk": "^2.1.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.5",
     "mkdirp": "^0.5.1",
     "update-notifier": "^2.5.0",
     "yeoman-generator": "^2.0.1",
