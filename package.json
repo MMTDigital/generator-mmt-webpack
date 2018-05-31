@@ -20,6 +20,7 @@
     "yeoman-generator"
   ],
   "devDependencies": {
+    "deep-extend": "^0.5.1",
     "nsp": "^2.6.3",
     "webpack-manifest-plugin": "^2.0.0-rc.1",
     "yeoman-assert": "^3.1.0",
