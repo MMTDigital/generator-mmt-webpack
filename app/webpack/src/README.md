@@ -97,14 +97,25 @@ If it's not your code, you have two options:
 ## FAQs
 
 **_How do I mount a React component within my "normal" JavaScript?_**
+
 [Follow this guide](https://mmtdigital.atlassian.net/wiki/spaces/DEV/pages/318898193/React+Inside+Kentico)
 
 **_How do I make Webpack pick up a .png / .jpg / .svg / .json / .webm / any other file?_**
+
 It must be imported into a JavaScript file for Webpack to process it. For "assets", there should be an `assetManifest.js` file where you can import your desired asset.
 
 **_How do I use web fonts?_**
+
 We don't recommend using them anymore and therefore do not support them. Try to use SVGs for icons — they're more accessible, scalable, CSS-able and more fit-for-purpose.
 
 **_I disagree with the linting rules / build setup, who can I talk to?_**
+
 No worries — first, raise it with the team on Slack and discuss the issue. If you still feel strongly about it and want to make a more global change to how MMT approach something — raise it on the [front-end change request spreadsheet](https://docs.google.com/spreadsheets/d/1na_atqQzJGrtpGLPGmD6__EmmKFri8FZOhKso9bp7gI)
 
+**_Visual Studio uses tabs, which breaks the linting?_**
+
+You can select independant code styles for different languages. Try going to Options > Text Editor > JavaScript.
+
+**_I'm getting a TS5055 error in Visual Studio_**
+
+If you're getting errors similar to: `Error TS5055 Cannot write file...` or `Warning        Your project specifies TypeScript version 2.6, but a matching compiler was not found. The latest available TypeScript compiler will be used (2.8)`. Our current solution to this is to go to Options > Text Editor > Project > General and tick _Only analyse projects which contain files opened in the editor_. This may not be the best approach though.
