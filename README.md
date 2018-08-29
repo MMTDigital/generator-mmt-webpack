@@ -1,5 +1,7 @@
-# generator-mmt-webpack [![MMT-Digital](https://img.shields.io/badge/MMT-Digital-red.svg)](https://www.mmtdigital.co.uk) [![NPM version][npm-image]][npm-url] [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com) [![Stylelint](https://img.shields.io/badge/stylelint-standard-brightgreen.svg)](https://github.com/stylelint/stylelint-config-standard)
+# generator-mmt-webpack 
 
+![MMT-Digital](https://img.shields.io/badge/MMT-Digital-red.svg)
+[![NPM version][npm-image]][npm-url]
 
 A yeoman generator to output a webpack boilerplate generator to seed internal MMT Digital projects. If you need to create a fresh front-end project for MMT, this is the tool to help you out!
 
