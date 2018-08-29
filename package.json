@@ -35,9 +35,6 @@
     "yeoman-option-or-prompt": "^2.0.0",
     "yosay": "^2.0.1"
   },
-  "scripts": {
-    "prepublish": "nsp check"
-  },
   "repository": "https://github.com/MMTDigital/generator-mmt-webpack",
   "license": "MIT"
 }
