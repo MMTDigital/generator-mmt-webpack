@@ -4,7 +4,7 @@
 // @param: {Number} $height
 //
 
-@function ratio-fn($width, $height) {
+@function ratio($width, $height) {
   $padding-top: ( $height / $width );
   @return percentage($padding-top);
 }
