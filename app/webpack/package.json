@@ -1,7 +1,7 @@
 {
-  "name": "<%= projectName %>",
+  "name": "PROJ",
   "version": "0.0.1",
-  "description": "A website build by MMT Digital",
+  "description": "A website built by MMT Digital",
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -27,7 +27,7 @@
     "@skatejs/bore": "^4.0.3",
     "@skatejs/val": "^0.3.1",
     "autoprefixer": "^7.1.4",
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^8.0.1",
     "babel-jest": "^22.0.4",
     "babel-loader": "^7.1.2",
@@ -60,7 +60,7 @@
     "html-loader": "^0.5.1",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
-    "img-loader": "^2.0.0",
+    "img-loader": "^3.0.1",
     "jest": "^22.0.4",
     "node-sass": "^4.5.3",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
