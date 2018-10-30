@@ -101,7 +101,8 @@
     "parser": "babel-eslint"
   },
   "stylelint": {
-    "extends": "@mmtdigital/stylelint-config"
+    "extends": "@mmtdigital/stylelint-config",
+    "ignoreFiles": "./src/styles/vendor/**/*.scss"
   },
   "jest": {
     "moduleNameMapper": {
