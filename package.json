@@ -21,17 +21,16 @@
   ],
   "devDependencies": {
     "deep-extend": "^0.5.1",
-    "nsp": "^2.6.3",
     "webpack-manifest-plugin": "^2.0.0-rc.1",
     "yeoman-assert": "^3.1.0",
-    "yeoman-test": "^1.7.0"
+    "yeoman-test": "^2.0.0"
   },
   "dependencies": {
     "chalk": "^2.1.0",
     "lodash": "^4.17.5",
     "mkdirp": "^0.5.1",
     "update-notifier": "^2.5.0",
-    "yeoman-generator": "^2.0.1",
+    "yeoman-generator": "^3.1.1",
     "yeoman-option-or-prompt": "^2.0.0",
     "yosay": "^2.0.1"
   },
