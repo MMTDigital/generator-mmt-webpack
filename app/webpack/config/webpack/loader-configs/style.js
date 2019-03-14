@@ -1,4 +1,5 @@
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import autoprefixer from 'autoprefixer'
 
 const sassLoaders = [
   {
@@ -12,10 +13,17 @@ const sassLoaders = [
   {
     loader: 'postcss-loader',
     options: {
+      ident: 'postcss',
       parser: 'postcss-scss',
-      config: {
-        path: '../../postcss.config.js'
-      }
+      plugins: [
+        autoprefixer({
+          browsers: [
+            'last 2 versions',
+            'IE >= 9',
+            'safari >= 8'
+          ]
+        })
+      ]
     }
   },
   {
