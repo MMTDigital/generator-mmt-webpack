@@ -5,7 +5,7 @@ import style from '../loader-configs/style'
 import font from '../loader-configs/font'
 import html from '../loader-configs/html'
 import image from '../loader-configs/image'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin'
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
 // import DelWebpackPlugin from 'del-webpack-plugin'
@@ -40,9 +40,8 @@ export default {
 
     new FaviconsWebpackPlugin(path.resolve(root, `${paths.input.images}/favicon.png`)),
 
-    new ExtractTextPlugin({
+    new MiniCssExtractPlugin({
       filename: 'styles.css',
-      allChunks: true,
       ignoreOrder: true
     })
 

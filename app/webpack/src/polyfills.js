@@ -10,8 +10,7 @@
  * core-js: https://github.com/zloirock/core-js
  */
 
-import 'core-js/fn/array/for-each'
-import 'core-js/fn/object/assign'
-import 'core-js/fn/promise'
-import 'core-js/es6/promise'
+import 'core-js/es/array/for-each'
+import 'core-js/es/object/assign'
+import 'core-js/es/promise'
 import 'regenerator-runtime/runtime' // async/await support

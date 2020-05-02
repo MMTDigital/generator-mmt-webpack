@@ -1,33 +1,35 @@
 {
   "presets": [
-    ["env"]
+    ["@babel/preset-env"]
   ],
   "plugins": [
-    "transform-object-rest-spread",
-    "transform-decorators",
-    "transform-decorators-legacy",
-    "transform-class-properties",
-    "transform-function-bind",
-    "transform-do-expressions",
-    "transform-react-jsx",
-    "transform-export-extensions",
-    "syntax-dynamic-import",
-    "syntax-async-functions",
-    "transform-regenerator",
+    "@babel/plugin-proposal-object-rest-spread",
+    ["@babel/plugin-proposal-decorators", {
+      "decoratorsBeforeExport": false
+    }],
+    "@babel/plugin-proposal-async-generator-functions",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-function-bind",
+    "@babel/plugin-proposal-do-expressions",
+    "@babel/plugin-transform-react-jsx",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-regenerator",
     [
       "module-resolver", {
-        "root": ["./"],
+        "root": ["./src"],
         "alias": {
-          "@root": "src",
-          "@assets": "src/assets",
-          "@images": "src/assets/images",
-          "@icons": "src/assets/icons",
-          "@fonts": "src/assets/fonts",
-          "@components": "src/components",
-          "@styles": "src/styles",
-          "@asset-manifest": "src/assetManifest.js",
-          "@polyfills": "src/polyfills.js",
-          "@global-styles": "src/styles/styles.scss"
+          "@root": "./src",
+          "@assets": "./src/assets",
+          "@images": "./src/assets/images",
+          "@icons": "./src/assets/icons",
+          "@fonts": "./src/assets/fonts",
+          "@components": "./src/components",
+          "@styles": "./src/styles",
+          "@asset-manifest": "./src/asset-manifest.js",
+          "@polyfills": "./src/polyfills.js",
+          "@global-styles": "./src/styles/styles.scss"
         }
       }
     ]
@@ -37,7 +39,7 @@
       "plugins": [
         "transform-remove-console",
         "transform-react-remove-prop-types",
-        "transform-react-constant-elements"
+        "@babel/plugin-transform-react-constant-elements"
       ]
     }
   }
