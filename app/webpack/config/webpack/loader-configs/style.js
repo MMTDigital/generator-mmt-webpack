@@ -1,12 +1,17 @@
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import autoprefixer from 'autoprefixer'
 
 const sassLoaders = [
+  MiniCssExtractPlugin.loader,
   {
     loader: 'css-loader',
     options: {
-      modules: false, // Switch this on for CSS Modules (https://github.com/css-modules/css-modules)
-      localIdentName: '[local]--[hash:base64:5]',
+      modules: false, // Switch this on and uncomment below for CSS Modules (https://github.com/css-modules/css-modules)
+      /*
+      modules: {
+        localIdentName: '[local]--[hash:base64:5]'
+      },
+      */
       sourceMap: true
     }
   },
@@ -29,7 +34,9 @@ const sassLoaders = [
   {
     loader: 'sass-loader',
     options: {
-      outputStyle: 'expanded'
+      sassOptions: {
+        outputStyle: 'expanded'
+      }
     }
   },
   {
@@ -42,7 +49,5 @@ const sassLoaders = [
 
 export default {
   test: /\.(css|scss)(\?.+)?$/,
-  loaders: ExtractTextPlugin.extract({
-    use: sassLoaders
-  })
+  use: sassLoaders
 }
