@@ -41,7 +41,14 @@ If you want to tweak the generator locally and contribute:
 * Pull this repo
 * `cd` to the cloned root directory
 * run `npm link` (this will allow you to globally test, without publishing)
-* Any problems, just hit me up (James Sear, @jpsear)
 
 [npm-image]: https://badge.fury.io/js/generator-mmt-webpack.svg
 [npm-url]: https://npmjs.org/package/generator-mmt-webpack
+
+## Publishing
+
+If you'd like to publish the package, you'll need to:
+
+* Become a member of the MMT Digital NPM organisation
+* Ensure the correct semantic version is set for your release
+* Run `npm publish` in the root of the repo!
