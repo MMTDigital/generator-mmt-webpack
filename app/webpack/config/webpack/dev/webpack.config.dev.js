@@ -1,4 +1,4 @@
-import merge from 'webpack-merge'
+import { merge } from 'webpack-merge'
 import base from '../base'
 import dev from './'
 
