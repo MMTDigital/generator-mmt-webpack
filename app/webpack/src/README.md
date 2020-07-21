@@ -102,7 +102,7 @@ If it's not your code, you have two options:
 
 **_How do I make Webpack pick up a .png / .jpg / .svg / .json / .webm / any other file?_**
 
-It must be imported into a JavaScript file for Webpack to process it. For "assets", there should be an `assetManifest.js` file where you can import your desired asset.
+It must be imported into a JavaScript file for Webpack to process it. For "assets", there should be an `asset-manifest.js` file where you can import your desired asset.
 
 **_How do I use web fonts?_**
 
