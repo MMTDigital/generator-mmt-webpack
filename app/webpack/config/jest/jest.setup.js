@@ -1,14 +1,9 @@
 // import enzyme from 'enzyme'
-import { mount } from '@skatejs/bore'
-import { h } from '@skatejs/val'
 
 /**
- * If you don't use react, you can use Bore to mount DOM elements.
- * Make sure Enzyme is commented out or removed.
+ * Jest is using JSDom as a default testing environment
+ * If it is used with vanilla js, there is no need for extra dependencies
 */
-
-global.mount = mount
-global.h = h
 
 /**
  *  If you are using React, you can use Enzyme to mount components
