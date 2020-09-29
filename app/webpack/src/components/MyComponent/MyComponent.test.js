@@ -1,10 +1,10 @@
-/* global describe, test, expect, mount */
+/* global describe, test, expect */
 /* eslint-disable no-unused-vars */
 
 import MyComponent from './MyComponent'
 
 describe('The MyComponent component', () => {
-  mount(`<div class="js-wrapper" />`)
+  document.body.innerHTML = '<div class="js-wrapper" />'
 
   test('can mount', () => {
     const component = new MyComponent('js-wrapper', 'js-button')
